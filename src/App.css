@@ -1,33 +1,166 @@
-.App {
-  text-align: center;
+html,body {
+  margin:0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+  /* background: rgb(240, 240, 52); */
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#App {
+  height: 100%;
+  font-family: 'Patua One', cursive;
+  padding-bottom:15vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 480px) {
+  .img1 {
+      display: none;
+  }
+  .img2 {
+      display: block;
+  }
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+@media (min-width: 481px) {
+  .img2 {
+      display: none;
+  }
+}
+input:focus{
+  outline: none;
+}
+#map {
+  height: 100vh;
+  width: 100vw;
+}
+.Card {
+  padding:2vh;
+  background-color: white;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius:5px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+.Dropzone {
+  height: 50vh;
+  width: 100%;
+  background-color: #fff;
+  border: 2px dashed rgb(187, 186, 186);
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  font-size: 16px;
+}
+.FileInput {
+  display: none;
+}
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 50%;
+  z-index: 1;
+  position: absolute;
+  bottom:10%;
+  left:5%;
+  border-radius: 3px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+.controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+.bm-burger-button {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  right: 15px;
+  top: 15px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #0022b8ab;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #777777;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: rgb(247, 247, 247);
+  box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
+  padding: 0.8em 0 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #000000;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+#page-wrap {
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+/* Individual item */
+.menu-item {
+  display: inline-block;
+  border-top:1px solid rgb(187, 186, 186);
+  /* Our sidebar item styling */
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
